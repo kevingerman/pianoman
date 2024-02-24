@@ -1,0 +1,7 @@
+[report]
+omit =
+    setup.py
+    pianoman/__main__.py
+    pianoman/_version.py
+    versioneer.py
+    tests/*
