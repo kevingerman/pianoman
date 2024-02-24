@@ -15,7 +15,7 @@ setup(
     author_email='kevin.german@gmail.com',
     url='https://github.com/kevingerman/pianoman',
     packages=['pianoman'],
-    
+    package_data={"pianoman": ["default.config.json"]},
     install_requires=requirements,
     keywords='pianoman',
     classifiers=[
