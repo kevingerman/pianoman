@@ -1,0 +1,49 @@
+[
+    { "flag":"i",
+      "name":"input",
+      "type":"str",
+      "default": "*.csv",
+      "help":"Paths which do not begin with a scheme identifier can use globs to indicate more than one file.  Files will be aggregated into a single frame. Loading is delegated to the framework so any sharding or balancing needed will be addressed there.  Supports csv, parquet, ...?"
+    },
+    { "flag":"g",
+      "name":"group_key",
+      "type":"list",
+      "default":[],
+      "help":"nargs - keys for relational columns which are numeric. Force numeric uses NaN if no default for non-numeric value. Key Fields - column names or indices that describe columns that identify the record or a relation to other records. If None, behavior undefined."
+    },
+    { "flag":"d",
+      "name":"defaults",
+      "type":"list",
+      "default":[],
+      "help":"nargs - key:value pairs describign a column name and a default value for errored or missing values"
+    },
+    { "flag":"s",
+      "name":"score_key",
+      "type":"list",
+      "default":[],
+      "help":"nargs - key indicator keys - Performance Indicator - column names or indices that describe columns with measurements.  If None, the system will attempt to infer these as fields with mostly unique values."
+    },
+    { "flag":"a",
+      "name":"attr_key",
+      "type": "list",
+      "default":0,
+      "help":"nargs - keys for relational columns which are textual.  Force as text - Attribute Fields - column names or indices that describe columns which describe the record but are not considered to be the measured values for that record."
+    },
+    {"flag":"f",
+     "name":"filter_expr",
+     "type":"list",
+     "default":"[]",
+     "help":"nargs - <key>:<value> pairs to filter dataset"
+    },
+    {"flag":"o",
+     "name":"output_filename",
+     "type":"str",
+     "help":"filename to save plot.  File type (svg or png) determined by filename suffix"
+    },
+    { "flag":"n",
+      "name":"cluster_size",
+      "type": "int",
+      "default":0,
+      "help":"Number of clusters to identify. Not to be confused with the k of k-means.  That K is autotuned to achieve this n."
+    }
+]
