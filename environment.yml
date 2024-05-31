@@ -11,4 +11,5 @@ dependencies:
   - cmake
   - ninja
   - pytest
-  - tox 
+  - tox
+  - versioneer>=0.29
