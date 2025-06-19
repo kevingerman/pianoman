@@ -32,5 +32,5 @@ jobs:
       run: |
         echo "Tested"
     - name: Publish Conda
-      uses: fcakyon/conda-publish-action@v1.3
-          
+      run: |
+        echo "Publish"
